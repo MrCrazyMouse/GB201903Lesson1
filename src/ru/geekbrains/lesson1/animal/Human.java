@@ -10,12 +10,12 @@ public class Human extends Animal implements Participant {
     private int jumpHeight;
     private int swimDistance;
 
-    public Human(String name, Color color, int age) {
+    public Human (String name, Color color, int age, int runDistance, int jumpHeight, int swimDistance) {
         super(name, color, age);
-    }
-
-    public Human(String name, Color color) {
-        super(name, color, 0);
+        this.isOnDistance = true;
+        this.runDistance = runDistance;
+        this.jumpHeight = jumpHeight;
+        this.swimDistance = swimDistance;
     }
 
     @Override

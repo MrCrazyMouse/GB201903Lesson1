@@ -1,6 +1,7 @@
 package ru.geekbrains.lesson1.animal;
 
 import ru.geekbrains.lesson1.Participant;
+import ru.geekbrains.lesson1.enums.Color;
 
 /**
  * Робот не является животным, но может учавствовать в соревнованиях
@@ -11,14 +12,21 @@ public class Robot implements Participant {
     private String name;
     private Color color;
     private int age;
+    private boolean isOnDistance;
+    private int runDistance;
+    private int jumpHeight;
+    private int swimDistance;
 
-    public Robot(String name, Color color, int age) {
-        this.name = name;
-        this.color = color;
-        this.age = age;
+    public Robot (String name, Color color, int age, int runDistance, int jumpHeight, int swimDistance) {
+        this.isOnDistance = true;
+        this.runDistance = runDistance;
+        this.jumpHeight = jumpHeight;
+        this.swimDistance = swimDistance;
     }
 
-    public abstract void voice();
+    public void voice() {
+        System.out.println("I`m R2D2");
+    }
 
     public String getName() {
         return name;
@@ -28,7 +36,7 @@ public class Robot implements Participant {
         this.name = name;
     }
 
-    public Color getColor() {
+    public Color  getColor() {
         return color;
     }
 
@@ -38,24 +46,6 @@ public class Robot implements Participant {
 
     public void setAge(int age) {
         this.age = age;
-    }
-
-    private boolean isOnDistance;
-    private int runDistance;
-    private int jumpHeight;
-    private int swimDistance;
-
-    public Dog(String name, Color color, int age) {
-        super(name, color, age);
-    }
-
-    public Dog(String name, Color color) {
-        super(name, color, 0);
-    }
-
-    @Override
-    public void voice() {
-        System.out.println("I`m R2D2");
     }
 
     @Override
