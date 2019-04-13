@@ -16,4 +16,10 @@ public class Team {
     public Participant[] getParticipants() {
         return participants;
     }
+
+    public Team(Team team) {
+    }
+
+    public void showResult(Team team) {
+    }
 }
