@@ -1,4 +1,6 @@
-package gbjavacore.lesson4;
+package gbjavacore.lesson4.Swing;
+
+import gbjavacore.lesson4.Swing.MainWindow;
 
 import javax.swing.*;
 
